@@ -1,8 +1,6 @@
 package Basics;
 // { Driver Code Starts
 //Initial Template for Java
-
-
 import java.util.*;
 import java.io.*;
 import java.lang.*;
