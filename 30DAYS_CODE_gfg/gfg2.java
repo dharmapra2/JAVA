@@ -1,3 +1,4 @@
+package 30DAYS_CODE_gfg;
 import java.io.*;
 import java.util.*;
 class gfg2{

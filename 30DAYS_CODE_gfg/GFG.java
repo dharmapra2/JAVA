@@ -1,4 +1,5 @@
 //Initial Template for Java
+package 30DAYS_CODE_gfg;
 import java.io.*;
 import java.util.*; 
 class GFG{
