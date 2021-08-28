@@ -5,7 +5,7 @@ import java.io.*;
 import java.util.*;
 
 public class smallest_divisible_number {
-    public static void main(String[] args) throws Exception {
+    public static void main(String...args) throws Exception {
         Scanner sc=new Scanner(System.in);
         int t=sc.nextInt();
         while(t-->0){
@@ -34,15 +34,15 @@ class Solution {
 	    return s ;
     }
     public static long gcd(long a,long b)
-{
+    {
     if(b==0)
     return a ;
     else
     return gcd(b,a%b);
-}
+    }
 
-public static long lcm(long a,long b)
-{
-    return (a*b)/gcd(a,b);
-}
+    public static long lcm(long a,long b)
+    {
+        return (a*b)/gcd(a,b);
+    }
 }
