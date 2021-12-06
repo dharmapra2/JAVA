@@ -12,9 +12,10 @@ class string_match{
             String A = sc.nextLine();
             String B = sc.nextLine();
             Solution ob = new Solution();
-            System.out.println(ob.repeated_String_Match(A,B));
+            System.out.println(ob.repeate_String_Match(A,B));
             t--;
         }
+        sc.close();
     } 
 } 
         
@@ -26,7 +27,7 @@ class string_match{
 
 class Solution 
 { 
-	static int repeate_String_Match(String A, String B) 
+	 int repeate_String_Match(String A, String B) 
 	{ 
         // Your code goes here
         String s = A;

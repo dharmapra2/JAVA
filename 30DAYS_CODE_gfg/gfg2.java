@@ -1,4 +1,4 @@
-import java.io.*;
+// import java.io.*;
 import java.util.*;
 class gfg2{
     public static void main(String[] args){
@@ -10,6 +10,7 @@ class gfg2{
             long nth=s.findNth(n);
             System.out.println(nth);
         }
+        sc.close();
     }
 }
 class Solution {

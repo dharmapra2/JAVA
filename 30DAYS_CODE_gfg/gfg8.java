@@ -1,23 +1,16 @@
 // { Driver Code Starts
 //Initial Template for Java
 
-import java.io.*;
+// import java.io.*;
 import java.util.*; 
 
  // } Driver Code Ends
-
-
-
-
-
-
-
 
 //User function Template for Java
 
 class Solution 
 { 
-	static int maxCandy(int height[], int n) 
+	 int maxCandy(int height[], int n) 
 	{ 
 	    // Your code goes here
 	     int max = 0;
@@ -37,8 +30,6 @@ class Solution
 	}
 }
 
-
-
 // { Driver Code Starts.
 class gfg8{
 	public static void main(String[] args) 
@@ -57,6 +48,7 @@ class gfg8{
             System.out.println(ob.maxCandy(height,n));
             t--;
         }
+        sc.close();
 	} 
 } 
 

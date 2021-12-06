@@ -1,6 +1,6 @@
 //Initial Template for Java
 import java.io.*;
-import java.util.*; 
+// import java.util.*; 
 class GFG{
     public static void main(String args[]) throws IOException { 
         BufferedReader read = new BufferedReader(new InputStreamReader(System.in));

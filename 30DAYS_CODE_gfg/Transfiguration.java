@@ -14,7 +14,7 @@ class Transfiguration
                     String A = arr[0];
                     String B = arr[1];
                     Solution obj = new Solution();
-                    System.out.println(obj.transfigure (A, B));
+                    System.out.println(obj.transfigure(A, B));
                 }
         }
 }// } Driver Code Ends
