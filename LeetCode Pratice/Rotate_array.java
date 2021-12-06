@@ -1,6 +1,6 @@
 //Initial Template for Java
 import java.io.*;
-public class Rotate_array {
+public class Rotate_array{
     public static void main(String args[]) throws IOException { 
         BufferedReader read = new BufferedReader(new InputStreamReader(System.in));
         int t = Integer.parseInt(read.readLine());
