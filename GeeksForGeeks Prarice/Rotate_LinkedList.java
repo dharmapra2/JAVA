@@ -34,6 +34,7 @@ public class Rotate_LinkedList {
             head = ob.rotate(head,k);
             printList(head);
         }
+        sc.close();
     }
     
     public static void printList(Node n) {
