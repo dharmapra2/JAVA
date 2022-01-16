@@ -1,7 +1,8 @@
-// { Driver Code Starts
 //Initial Template for Java
+
 import java.io.*;
-class Reverse_a_string
+
+class Reverse
 {
     public static void main(String args[])throws IOException
     {
@@ -11,8 +12,8 @@ class Reverse_a_string
         while(t-- >0)
         {
             String str = read.readLine();
-            new Reverse();
-            System.out.println(Reverse.reverseWord(str));
+            new Solution();
+            System.out.println(Solution.reverseWord(str));
         }
     }
 }// } Driver Code Ends
@@ -21,14 +22,14 @@ class Reverse_a_string
 //User function Template for Java
 
 
-class Reverse
+class Solution
 {
     // Complete the function
     // str: input string
     public static String reverseWord(String str)
     {
-      StringBuilder sb=new StringBuilder(str);  
-    sb.reverse();  
-    return sb.toString();  
+        // Solution the string str
+        StringBuffer sb=new StringBuffer(str);
+        return sb.reverse().toString();
     }
 }
