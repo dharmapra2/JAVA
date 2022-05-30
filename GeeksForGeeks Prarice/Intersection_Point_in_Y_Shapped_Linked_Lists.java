@@ -1,151 +1,146 @@
 import java.util.*;
-class Node
-{
+
+class Node {
     int data;
     Node next;
+
     Node(int d) {
-        data = d; 
+        data = d;
         next = null;
     }
 }
-	
-public class Intersection_Point_in_Y_Shapped_Linked_Lists{
-    Node head = null;  
-	Node tail = null;
 
-public void addToTheLast(Node node) 
-{
+public class Intersection_Point_in_Y_Shapped_Linked_Lists {
+    Node head = null;
+    Node tail = null;
 
-  if (head == null) {
-   head = node;
-   tail = head;
-  } else {
-   //Node temp = head;
-   //while (temp.next != null)
-    //temp = temp.next;
+    public void addToTheLast(Node node) {
 
-   //temp.next = node;
-   tail.next=node;
-   tail = node;
-  }
-}
+        if (head == null) {
+            head = node;
+            tail = head;
+        } else {
+            // Node temp = head;
+            // while (temp.next != null)
+            // temp = temp.next;
 
-  /* Function to print linked list */
-    void printList()
-    {
+            // temp.next = node;
+            tail.next = node;
+            tail = node;
+        }
+    }
+
+    /* Function to print linked list */
+    void printList() {
         Node temp = head;
-        while (temp != null)
-        {
-           System.out.print(temp.data+" ");
-           temp = temp.next;
-        }  
+        while (temp != null) {
+            System.out.print(temp.data + " ");
+            temp = temp.next;
+        }
         System.out.println();
     }
-	
-	 
- 
-     /* Driver program to test above functions */
-    public static void main(String args[])
-    {
-       
-         
-        /* Constructed Linked List is 1->2->3->4->5->6->
-           7->8->8->9->null */
-         Scanner sc = new Scanner(System.in);
-		 int t=sc.nextInt();
-		 
-		 while(t>0)
-         {
-			int n1 = sc.nextInt();
-			int n2 = sc.nextInt();
-			int n3 = sc.nextInt();
-			// Intersection_Point_in_Y_Shapped_Linked_Lists llist1 = new Intersection_Point_in_Y_Shapped_Linked_Lists();
-		    // Intersection_Point_in_Y_Shapped_Linked_Lists llist2 = new Intersection_Point_in_Y_Shapped_Linked_Lists();
-			// Intersection_Point_in_Y_Shapped_Linked_Lists llist3 = new Intersection_Point_in_Y_Shapped_Linked_Lists();
-			
-				int a1=sc.nextInt();
-				Node head1= new Node(a1);
-				Node tail1= head1;
-				
-				for (int i = 1; i < n1; i++) 
-				{
-					int a = sc.nextInt(); 
-					tail1.next = (new Node(a));
-					tail1= tail1.next;
-				}
-			
-			
-				int b1=sc.nextInt();
-				Node head2 = new Node(b1);
-				Node tail2 = head2;
-				for (int i = 1; i < n2; i++) 
-				{
-					int b = sc.nextInt();  
-					tail2.next = (new Node(b));
-					tail2= tail2.next;
-				}
-				
-				int c1=sc.nextInt();
-				Node head3= new Node(c1);
-				tail1.next = head3;
-				tail2.next = head3;
-				Node tail3=head3;
-				for (int i = 1; i < n3; i++) 
-				{
-					int c = sc.nextInt();   
-					tail3.next = (new Node(c));
-					tail3= tail3.next;
-				}
-				
-				Intersect obj = new Intersect();
-				System.out.println(obj.intersectPoint(head1, head2));
-			t--;			
+
+    /* Driver program to test above functions */
+    public static void main(String args[]) {
+
+        /*
+         * Constructed Linked List is 1->2->3->4->5->6->
+         * 7->8->8->9->null
+         */
+        Scanner sc = new Scanner(System.in);
+        int t = sc.nextInt();
+
+        while (t > 0) {
+            int n1 = sc.nextInt();
+            int n2 = sc.nextInt();
+            int n3 = sc.nextInt();
+            // Intersection_Point_in_Y_Shapped_Linked_Lists llist1 = new
+            // Intersection_Point_in_Y_Shapped_Linked_Lists();
+            // Intersection_Point_in_Y_Shapped_Linked_Lists llist2 = new
+            // Intersection_Point_in_Y_Shapped_Linked_Lists();
+            // Intersection_Point_in_Y_Shapped_Linked_Lists llist3 = new
+            // Intersection_Point_in_Y_Shapped_Linked_Lists();
+
+            int a1 = sc.nextInt();
+            Node head1 = new Node(a1);
+            Node tail1 = head1;
+
+            for (int i = 1; i < n1; i++) {
+                int a = sc.nextInt();
+                tail1.next = (new Node(a));
+                tail1 = tail1.next;
+            }
+
+            int b1 = sc.nextInt();
+            Node head2 = new Node(b1);
+            Node tail2 = head2;
+            for (int i = 1; i < n2; i++) {
+                int b = sc.nextInt();
+                tail2.next = (new Node(b));
+                tail2 = tail2.next;
+            }
+
+            int c1 = sc.nextInt();
+            Node head3 = new Node(c1);
+            tail1.next = head3;
+            tail2.next = head3;
+            Node tail3 = head3;
+            for (int i = 1; i < n3; i++) {
+                int c = sc.nextInt();
+                tail3.next = (new Node(c));
+                tail3 = tail3.next;
+            }
+
+            Intersect obj = new Intersect();
+            System.out.println(obj.intersectPoint(head1, head2));
+            t--;
         }
         sc.close();
     }
 }
 // } Driver Code Ends
 
+/*
+ * Node of a linked list
+ * class Node {
+ * int data;
+ * Node next;
+ * Node(int d) { data = d; next = null; }
+ * }
+ * Linked List class
+ * class LinkedList
+ * {
+ * Node head; // head of list
+ * }
+ */
 
-/* Node of a linked list
- class Node {
-   int data;
-    Node next;
-    Node(int d)  { data = d;  next = null; }
-}
- Linked List class
-class LinkedList
-{
-    Node head;  // head of list
-}*/
-
-class Intersect
-{
-    int count(Node temp){
-        int c=1;
-        while(temp!=null){
+class Intersect {
+    int count(Node temp) {
+        int c = 1;
+        while (temp != null) {
             c++;
-            temp=temp.next;
+            temp = temp.next;
         }
         return c;
     }
-    //Function to find intersection point in Y shaped Linked Lists.
-	int intersectPoint(Node head1, Node head2)
-	{
-         // code here
-         int c1=count(head1);
-         int c2=count(head2);
-         Node p1=head1,p2=head2;
-        for(int i=1;i<=Math.abs(c1-c2);i++){
-           if(c1>c2) p1=p1.next;
-           else p2=p2.next;
-        }
-        while(p1!=p2){
-           p1= p1.next;
-           p2=p2.next;
-        }
-   
-   return p2.data;
-	}
-}
 
+    // Function to find intersection point in Y shaped Linked Lists.
+    int intersectPoint(Node head1, Node head2) {
+        // code here
+        int c1 = count(head1);
+        int c2 = count(head2);
+        Node p1 = head1, p2 = head2;
+        for (int i = 1; i <= Math.abs(c1 - c2); i++) {
+            if (c1 > c2)
+                p1 = p1.next;
+            else
+                p2 = p2.next;
+        }
+        while (p1 != p2) {
+            p1 = p1.next;
+            p2 = p2.next;
+        }
+
+        return p2.data;
+    }
+}
