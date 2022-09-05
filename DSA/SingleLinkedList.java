@@ -3,11 +3,11 @@ import static java.lang.System.*;
 import java.util.Scanner;
 public class SingleLinkedList {
     private static final String NULL = "null\n";//define constant variable
-    private ListNode head,temp,prev=null;//declearing datatype for list
+    private ListNode head,temp,prev=null;//declaring datatype for list
     int count=0;
     private static class ListNode{//inner class
             private int data;
-            private ListNode next; //referance to next ListNode in list
+            private ListNode next; //reference to next ListNode in list
             public ListNode(int data){
                 this.data=data;
                 this.next=null;
@@ -54,13 +54,13 @@ public class SingleLinkedList {
         if(head==null)
         {
             head=newNode;
-            out.println("After Succesfully inserted list:");
+            out.println("After Successfully inserted list:");
             display();
             return;
         }
         newNode.next=head;
         head=newNode;
-        out.println("After Succesfully inserted list:");
+        out.println("After Successfully inserted list:");
         display();
     }
     public void insertAtEnd(int value){
@@ -68,7 +68,7 @@ public class SingleLinkedList {
         if(head==null)
         {
             head=newNode;
-            out.println("After Succesfully inserted list:");
+            out.println("After Successfully inserted list:");
         display();
             return;
         }
@@ -77,7 +77,7 @@ public class SingleLinkedList {
             temp=temp.next;
         }
         temp.next=newNode;
-        out.println("After Succesfully inserted list:");
+        out.println("After Successfully inserted list:");
         display();
     }
     public void insertAtPos(int pos,int value){
@@ -96,7 +96,7 @@ public class SingleLinkedList {
             prev.next=newNode;
             newNode.next=temp;
         }
-        out.println("After Succesfully inserted list:");
+        out.println("After Successfully inserted list:");
         display();
     }
     public int deleteFirst(){
@@ -209,11 +209,11 @@ public class SingleLinkedList {
         Thread.sleep(1000);
         out.println("Hyy "+name+" glad to see u again ('-'*).");
         Thread.sleep(1200);
-        out.println("Let's pratice some DSA stuff :)\n------------------------------");
+        out.println("Let's practice some DSA stuff :)\n------------------------------");
         int choice;
         do{
             Thread.sleep(980);
-            out.println("1.for inseting\n2.for deleting\n3.For Display\n4.Find out length of the list\n5.Search an item into the list\n6.Reverse a list\n7.Find middle of node\n8.Find Nth node from the end of list");
+            out.println("1.for insetting\n2.for deleting\n3.For Display\n4.Find out length of the list\n5.Search an item into the list\n6.Reverse a list\n7.Find middle of node\n8.Find Nth node from the end of list");
             Thread.sleep(1000);
             out.println("Enter Choice:");
             choice=sc.nextInt();
@@ -223,7 +223,7 @@ public class SingleLinkedList {
                         int ch,value;
                         Thread.sleep(800);
                         out.println("--------------------------------------------------");
-                        out.println("1.Insert at Begining.\n2.Insert at end.\n3.Insert at specific position.");
+                        out.println("1.Insert at Beginning.\n2.Insert at end.\n3.Insert at specific position.");
                         out.println("Enter Choice for inserting:");                        
                         ch=sc.nextInt();
                         switch(ch){
@@ -264,9 +264,9 @@ public class SingleLinkedList {
                         int ch;
                         Thread.sleep(800);
                         out.println("--------------------------------------------------");
-                        out.println("1.Delete at Begining.\n2.Delete at end.\n3.Delete at specific position.\n4.Delete Data Item.");
+                        out.println("1.Delete at Beginning.\n2.Delete at end.\n3.Delete at specific position.\n4.Delete Data Item.");
                         Thread.sleep(500);
-                        out.println("Enter Choice for deleteing:"); 
+                        out.println("Enter Choice for deleting:"); 
                         ch=sc.nextInt();
                         switch(ch){
                             case 1:
