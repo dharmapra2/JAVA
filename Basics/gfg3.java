@@ -1,6 +1,4 @@
-package Basics;
 import java.util.Scanner;
-import java.lang.Math;
 
 class gfg3 {
     public static void main(String args[]) {

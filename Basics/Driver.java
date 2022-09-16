@@ -1,9 +1,7 @@
 // package Basics;
 // { Driver Code Starts
 //Initial Template for Java
-import java.util.*;
 import java.io.*;
-import java.lang.*;
 
 class Driver
 {
@@ -41,7 +39,7 @@ class Driver
 
 class Get
 {
-    public static int sumElement(int arr[], int n)
+    public int sumElement(int arr[], int n)
     {
         // Your code here
         int sum=arr[0];

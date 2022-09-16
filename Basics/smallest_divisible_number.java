@@ -1,8 +1,5 @@
-package Basics;
-
 // { Driver Code Starts
 //Initial Template for Java
-import java.io.*;
 import java.util.*;
 
 public class smallest_divisible_number {
@@ -11,8 +8,8 @@ public class smallest_divisible_number {
         int t = sc.nextInt();
         while (t-- > 0) {
             int n = sc.nextInt();
-            Solution g = new Solution();
-            System.out.println(Solution.getSmallestDivNum(n));
+            Solution2 g = new Solution2();
+            System.out.println(Solution2.getSmallestDivNum(n));
         }
         sc.close();
     }
@@ -22,7 +19,7 @@ public class smallest_divisible_number {
 
 // User function Template for Java
 
-class Solution {
+class Solution2 {
     public static long getSmallestDivNum(int n) {
         // code here
         long s = 1;

@@ -13,13 +13,13 @@ class Search_position {
             int a[] = new int[n];
             for (int i = 0; i < n; i++)
                 a[i] = Integer.parseInt(input_line[i]);
-            Solution ob = new Solution();
-            System.out.println(ob.searchInsert(a, target));
+            Insert ob = new Insert();
+            System.out.println(ob.searchInsert(a, 2));
         }
     }
 }
 
-class Solution {
+class Insert {
     public int searchInsert(int[] nums, int target) {
         int i;
         for (i = 0; i <= nums.length - 1; i++) {

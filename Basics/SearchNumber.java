@@ -17,15 +17,15 @@ import java.io.*;
                   
                 int x = Integer.parseInt(read.readLine());
                 
-                Solution obj = new Solution();
+                Solution1 obj = new Solution1();
                 
                 System.out.println(obj.search(arr, sizeOfArray, x));
             }
         }
     }
-    class Solution{
+    class Solution1{
             
-        static int search(int arr[], int N, int X)
+        int search(int arr[], int N, int X)
         {
             for(int i=0;i<N;i++){
                 if(arr[i]==X)

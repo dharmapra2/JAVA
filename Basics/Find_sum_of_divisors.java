@@ -25,7 +25,7 @@ class Find_sum_of_divisors
 
 //User function Template for Java
 class Solution{
-    static int sumOfDivisors(int N){
+    int sumOfDivisors(int N){
         // code here
        int result=0;
         for(int i=1;i<=N;i=i+1){

@@ -12,8 +12,9 @@ public class Two_sum {
             int a[] = new int[n];
             for (int i = 0; i < n; i++)
                 a[i] = Integer.parseInt(input_line[i]);
-            Solution ob = new Solution();
+            Solution1 ob = new Solution1();
             int arr[] = new int[2];
+            int target=3;
             arr = ob.twoSum(a, target);
             for (int a1 : arr) {
                 System.out.print(a1);
@@ -23,7 +24,7 @@ public class Two_sum {
     }
 }
 
-class Solution {
+class Solution1 {
     public int[] twoSum(int[] num, int target) {
         int n[] = new int[2];
         for (int i = 0; i < num.length; i++) {
