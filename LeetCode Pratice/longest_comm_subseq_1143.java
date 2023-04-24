@@ -3,7 +3,7 @@ import java.util.Arrays;
 class longest_comm_subseq_1143 {
 
   public static void main(String[] args) {
-    String text1 = "abc", text2 = "abc";
+    String text1 = "abccc", text2 = "bbbdwef";
     Solution sol = new Solution();
     System.out.println(sol.longestCommonSubsequence(text1, text2));
   }
@@ -13,31 +13,48 @@ class Solution {
 
   private int[][] memo;
 
+  // approach 2
   public int longestCommonSubsequence(String text1, String text2) {
     int m = text1.length();
     int n = text2.length();
-    memo = new int[m][n];
+    memo = new int[m + 1][n + 1];
 
-    int t = search(text1, text2, 0, 0);
-    System.out.println(Arrays.deepToString(memo));
-    return t;
+    for (int i = 1; i <= m; i++) {
+      for (int j = 1; j <= n; j++) {
+        if (text1.charAt(i - 1) == text2.charAt(j - 1)) {
+          memo[i][j] = 1 + memo[i - 1][j - 1];
+        } else {
+          memo[i][j] = Math.max(memo[i - 1][j], memo[i][j - 1]);
+        }
+      }
+    }
+    return memo[m][n];
   }
 
+  //   Approach 1 (using recursion and memosization) here time limit excede
+  //   public int longestCommonSubsequence(String text1, String text2) {
+  //     int m = text1.length();
+  //     int n = text2.length();
+  //     memo = new int[m][n];
+
+  //     int t = search(text1, text2, 0, 0);
+  //     // System.out.println(Arrays.deepToString(memo));
+  //     return t;
+  //   }
+
   private int search(String s1, String s2, int i, int j) {
-    if (i == s1.length() || j == s2.length()) {
+    if (i >= s1.length() || j >= s2.length()) {
       return 0;
     }
-    if (memo[i][j] > 0) {
+    if (memo[i][j] != -1) {
       return memo[i][j];
     }
-    int result = 0;
     if (s1.charAt(i) == s2.charAt(j)) {
-      result = 1 + search(s1, s2, i + 1, j + 1);
-    } else {
-      result = Math.max(search(s1, s2, i + 1, j), search(s1, s2, i, j + 1));
+      return memo[i][j] = 1 + search(s1, s2, i + 1, j + 1);
     }
-    memo[i][j] = result;
-    return result;
+    return (
+      memo[i][j] = Math.max(search(s1, s2, i + 1, j), search(s1, s2, i, j + 1))
+    );
   }
 }
 /**
