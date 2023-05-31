@@ -4,16 +4,7 @@ import java.util.*;
 class list_of_anagrams {
 
   public static void main(String[] args) throws IOException {
-    String string_list[] = {
-      "eat",
-      "nat",
-      "ate",
-      "tan",
-      "bat",
-      "eye",
-      "tab",
-      "ant",
-    };
+    String string_list[] = { "ddddddddddg", "dgggggggggg" };
 
     Solution ob = new Solution();
     List<List<String>> ans = ob.Anagrams(string_list);
@@ -43,14 +34,19 @@ class Solution {
   public List<List<String>> Anagrams(String[] string_list) {
     HashMap<String, List<String>> map = new HashMap<>();
     for (String str : string_list) {
-      char ch[] = new char[26];
-      for (int i = 0; i < str.length(); i++) {
-        int temp = str.charAt(i);
-        ch[temp - 'a'] = (char) temp;
+      int ch[] = new int[26];
+      for (char c : str.toCharArray()) {
+        ch[c - 'a']++;
       }
-      String temp_str = new String(ch);
+      StringBuilder sb = new StringBuilder();
+      for (int character : ch) {
+        sb.append(character);
+        sb.append("#");
+      }
+      String temp_str = new String(sb.toString());
       map.computeIfAbsent(temp_str, k -> new ArrayList<>()).add(str);
     }
+    System.out.println(map);
     return new ArrayList<>(map.values());
   }
 }
