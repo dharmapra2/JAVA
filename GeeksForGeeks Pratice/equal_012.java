@@ -3,7 +3,7 @@ import java.util.HashMap;
 class equal_012 {
 
   public static void main(String[] args) {
-    String str = "0102010";
+    String str = "1212101111";
     Solution T = new Solution();
 
     System.out.println(T.getSubstringWithEqual012(str));
@@ -16,7 +16,7 @@ class Solution {
     int countString = 0, count_0 = 0, count_1 = 0, count_2 = 0;
     HashMap<String, Integer> checkEqalSubString = new HashMap<>();
     checkEqalSubString.put("0$0", 1);
-    long largestValue = Long.MIN_VALUE;
+    long largestValue = 0;
 
     for (char ch : str.toCharArray()) {
       switch (ch) {
@@ -31,20 +31,17 @@ class Solution {
           break;
       }
       String temp_str = (count_1 - count_0) + "$" + (count_2 - count_1);
-      checkEqalSubString.compute(
-        temp_str,
-        (key, value) -> (value == null) ? 1 : value + 1
-      );
-      largestValue = Math.max(largestValue, checkEqalSubString.get(temp_str));
-      //   System.out.printf(
-      //     "for ch = %c ==>%s  -> %d \n",
-      //     ch,
+      if (checkEqalSubString.containsKey(temp_str)) {
+        largestValue += checkEqalSubString.get(temp_str);
+        checkEqalSubString.put(temp_str, checkEqalSubString.get(temp_str) + 1);
+      } else {
+        checkEqalSubString.put(temp_str, 1);
+      }
+      //   checkEqalSubString.compute(
       //     temp_str,
-      //     checkEqalSubString.get(temp_str)
+      //     (key, value) -> (value == null) ? 1 : value + 1
       //   );
     }
-    // System.out.println(count_0 + "==" + count_1 + "===" + count_2);
-    // System.out.println(checkEqalSubString);
     return largestValue;
   }
 }
