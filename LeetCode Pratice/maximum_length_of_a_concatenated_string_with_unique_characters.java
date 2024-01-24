@@ -3,7 +3,20 @@ import java.util.Arrays;
 import java.util.List;
 
 /**
+ * https://leetcode.com/problems/maximum-length-of-a-concatenated-string-with-unique-characters/description/?envType=daily-question&envId=2024-01-23
  * maximum_length_of_a_concatenated_string_with_unique_characters
+ * 
+ * Example 1: 
+ *      Input: arr = ["un","iq","ue"] 
+ *      Output: 4 
+ *      Explanation: All the valid concatenations are: 
+ *      - "" 
+ *      - "un" 
+ *      - "iq" 
+ *      - "ue" 
+ *      - "uniq" ("un" + "iq") 
+ *      - "ique" ("iq" + "ue") 
+ *      Maximum length is 4.
  */
 public class maximum_length_of_a_concatenated_string_with_unique_characters {
 
