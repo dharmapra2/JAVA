@@ -2,21 +2,23 @@ import java.util.Arrays;
 
 /**
  * https://leetcode.com/problems/majority-element/
+ * https://leetcode.com/problems/majority-element-ii/
  * majority_element
- * 
+ *
+ *
  * approaches:-
  * 1. with sorting tc:- O(n log n)
- * 2. Using Boyer-Moore Voting Algorithm 
+ * 2. Using Boyer-Moore Voting Algorithm
  * 3. Using Boyer-Moore Voting Algorithm but including validation check which make it more efficient.
  */
 public class majority_element {
 
   public static void main(String[] args) {
     // int arr[] = { 6, 6, 6, 7, 7 };
-    int arr[] = { 3, 2, 3 };
-    // int arr[] = { 2, 2, 1, 1, 1, 2, 2 };
+    // int arr[] = { 3, 2, 3 };
+    int arr[] = { 2, 2, 1, 1, 1, 2, 2 };
     Innermajority_element sol = new Innermajority_element();
-    System.out.println(sol.majorityElement(arr));
+    System.out.println(sol.majorityElementByMoore(arr));
   }
 }
 
@@ -50,7 +52,27 @@ class Innermajority_element {
         count = 1;
       }
     }
-
     return num;
+  }
+
+  int majorityElementByMoore(int[] nums) {
+    int ele = nums[0], count = 1, len = nums.length;
+    for (int i = 1; i < len; i++) {
+      int temp = nums[i];
+      if (count == 0) {
+        count = 1;
+        ele = temp;
+      }
+      if (ele == temp) {
+        count++;
+      } else {
+        count--;
+      }
+    }
+    count = 0;
+    for (int i : nums) {
+      if (ele == i) count++;
+    }
+    return count > (len >> 2) ? ele : -1;
   }
 }
