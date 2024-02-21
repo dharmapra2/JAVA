@@ -23,6 +23,7 @@ class k_diff_pairs_in_an_array {
  */
 class Innerk_diff_pairs_in_an_array {
 
+  // TC- 0(n)
   public int findPairs(int[] nums, int k) {
     Map<Integer, Integer> map = new HashMap<>();
     for (int num : nums) map.put(num, map.getOrDefault(num, 0) + 1);
@@ -34,6 +35,7 @@ class Innerk_diff_pairs_in_an_array {
     return result;
   }
 
+  // TCp- 0(nlogn)
   public int findPairs_2(int[] nums, int k) {
     Set<Integer> uniquePair = new HashSet<Integer>();
     Arrays.sort(nums);
