@@ -23,7 +23,7 @@ import java.util.Stack;
  *      30 <= temperatures[i] <= 100
  */
 public class daily_temperatures {
-
+  
   public static void main(String[] args) {
     int arr[] = { 73, 74, 75, 71, 69, 72, 76, 73 };
     Innerdaily_temperatures sol = new Innerdaily_temperatures();
