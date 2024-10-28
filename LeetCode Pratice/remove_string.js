@@ -14,3 +14,5 @@ splice_string_2.map((item) => {
   splice_string_1 = splice_string_1.toSpliced(index, 1);
 });
 console.log(splice_string_1.join(" "));
+
+
